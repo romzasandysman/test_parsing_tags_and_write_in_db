@@ -1,0 +1,17 @@
+.disabled {
+  pointer-events: none;
+  opacity: 0.8;
+}
+.container {
+  margin-top: 5%;
+}
+.container .list-tags {
+  margin-top: 5%;
+}
+.modal .modal-body {
+  word-break: break-all;
+}
+.modal .modal-body .row {
+  border-bottom: 1px solid;
+}
+/*# sourceMappingURL=main.css.map */

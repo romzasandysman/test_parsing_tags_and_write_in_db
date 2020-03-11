@@ -1,0 +1,24 @@
+create database if not exists parsing_tags;
+use parsing_tags;
+
+create table if not exists tags
+(
+	id_tag int auto_increment primary key,
+	name_tag varchar(200) not null unique
+);
+
+create table if not exists descriptions
+(
+	id_description int auto_increment primary key,
+	id_tag int not null,
+	description mediumtext not null,
+    foreign key (id_tag) references tags (id_tag) on delete cascade
+);
+
+create table if not exists contents
+(
+	id_content int auto_increment primary key,
+	id_tag int not null,
+	content longtext not null,
+    foreign key (id_tag) references tags (id_tag) on delete cascade
+);
